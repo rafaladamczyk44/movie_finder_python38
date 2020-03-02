@@ -1,11 +1,10 @@
-import requests
 from random import choice
 from tmdbv3api import TMDb
 from tmdbv3api import Movie
 
 def search_movie(query):
     tmdb = TMDb()
-    tmdb.api_key = 'be9603d000eacf54e7993c25318325d4'
+    tmdb.api_key = 'PLEASE GENERATE UR OWN KEY, EVERYTHING YOU NEED IS IN README FILE'
     movie = Movie()
 
     result = movie.search(query)
