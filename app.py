@@ -1,10 +1,9 @@
 from random import choice
-from tmdbv3api import TMDb
-from tmdbv3api import Movie
+from tmdbv3api import TMDb, Movie
 
 def search_movie(query):
     tmdb = TMDb()
-    tmdb.api_key = 'PLEASE GENERATE UR OWN KEY, EVERYTHING YOU NEED IS IN README FILE'
+    tmdb.api_key = 'be9603d000eacf54e7993c25318325d4'
     movie = Movie()
 
     result = movie.search(query)
@@ -23,9 +22,9 @@ def search_movie(query):
                 else:
                     print(f'Movie id: {res.id}')
                     print(f'Plot: {res.overview}')
-                    print(f'released in {res.release_date}')
-                    similar = movie.similar(res.id)
+                    print(f'Released in {res.release_date}')
 
+                    similar = movie.similar(res.id)
                     for sim in similar:
                         print(f'Similar movie: {sim} (movie id: {sim.id}), released in {sim.release_date}')
                         break
